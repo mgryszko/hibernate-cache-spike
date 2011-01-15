@@ -16,7 +16,7 @@
         <maven.surefire.version>2.5</maven.surefire.version>
 
         <groovy.version>1.7.6</groovy.version>
-        
+
         <slf4j.version>1.6.1</slf4j.version>
         <log4j.version>1.2.16</log4j.version>
         <junit.version>4.8.2</junit.version>
@@ -26,6 +26,13 @@
         <javassist.version>3.12.1.GA</javassist.version>
         <ehcache.version>2.3.1</ehcache.version>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>jboss</id>
+            <url>http://repository.jboss.org/nexus/content/groups/public</url>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>
@@ -90,7 +97,7 @@
             <artifactId>groovy-all</artifactId>
             <version>${groovy.version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>jcl-over-slf4j</artifactId>
