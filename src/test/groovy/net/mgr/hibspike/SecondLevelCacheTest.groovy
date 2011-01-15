@@ -2,7 +2,7 @@ package net.mgr.hibspike
 
 import groovy.sql.Sql
 import org.hibernate.SessionFactory
-import org.hibernate.cfg.AnnotationConfiguration
+import org.hibernate.cfg.Configuration
 import org.hibernate.stat.Statistics
 import org.junit.AfterClass
 import org.junit.Before
@@ -21,7 +21,7 @@ class SecondLevelCacheTest {
     }
 
     private static def buildSessionFactory() {
-        sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory()
+        sessionFactory = new Configuration().configure().buildSessionFactory()
     }
 
     private static Sql createSqlFacade() {
